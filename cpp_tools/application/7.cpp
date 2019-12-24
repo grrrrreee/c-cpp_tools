@@ -31,6 +31,7 @@ int separate::stage2(int a, int b){
         c = pow(10,b-1);
         d = a % c;
         a = (a - d) / c;
+        // a = (a - d);
         b--;
         cout << a <<endl;
         a = d;
