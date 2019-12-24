@@ -41,7 +41,8 @@ int separate::stage2(int a, int b) {
 int main() {
     separate sp;
     int a; cout << "a is : "; cin >> a;
-    
+    // 1234
+    // 4, 3, 2, 1
     int b;
     b = sp.stage1(a);
     sp.stage2(a, b);
