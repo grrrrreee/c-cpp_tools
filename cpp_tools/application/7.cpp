@@ -9,7 +9,6 @@ class separate {
     int a,num;
     int stage1(int a);
     int stage2(int a, int b);
-    void stage3();
 };
 
 int separate::stage1(int a) {

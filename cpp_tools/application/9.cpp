@@ -9,7 +9,6 @@ class separate {
     int a,num;
     int stage1(int a);
     int stage2(int a, int b);
-    int stage3(int a, int b);
 };
 
 int separate::stage1(int a) {
@@ -26,20 +25,22 @@ int separate::stage1(int a) {
 int separate::stage2(int a, int b) {
     separate sp;
     b = sp.stage1(a);
-    int n,m,l; n = 0; m = 0; l=0;
-    // 진수 결정
-    cout << "what is the value of l? "; cin >>l;
+    int n; n = 0;
+    list<int> l;
+    list<int>::iterator ll;
     while(n < b) {
         int c;
         c = a % 10;
         a = a - c;
         a = a/10;
-        m = m + c * pow(l,n);
         n ++;
         cout << c <<endl;
+        l.push_back(c);
     }
-    // 10진수 값 도출 
-    cout << m << endl;
+    cout << "list l is : ";
+    for (ll = l.begin(); ll!=l.end(); ll++) {
+        cout << *ll << "  ";
+    }
     return 0;
 }
 
